@@ -34,6 +34,15 @@ You may choose to rely on DockSTARTer for various changes to your Docker system 
 
   ```bash
   sudo apt-get install curl git
+  # You will need not root user. If you plan use Coder we recommend create user `coder` :
+  sudo useradd -m coder
+  # You will be asked for new password for `coder`
+  sudo passwd coder
+  # User must have priviledges of sudoers to install Docker:
+  echo "coder ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/coder
+  # Start session for `coder`:
+  su - coder
+  # Execute install:
   bash -c "$(curl -fsSL https://get.dockstarter.com)"
   sudo reboot
   ```
