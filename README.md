@@ -52,6 +52,7 @@ You may choose to rely on DockSTARTer for various changes to your Docker system 
   just copy %HOME%\.vscode\extensions (usually like C:\Users\itsmeohgotuser\.vscode\extensions)
   to remote host (usually like /home/coder/.config/appdata/codeserver/extensions/)
   and NOT forget to run following coomands on docker hosting machine:
+  
   ```bash
   # stop container
    sudo docker stop codeserver
