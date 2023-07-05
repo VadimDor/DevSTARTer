@@ -48,7 +48,8 @@ You may choose to rely on DockSTARTer for various changes to your Docker system 
   ```
   
   ```bash
-  > N.B. :If you are on Windows and want to replicate you plugins from your local VS Code environment to remote docker,
+  > Tip for Windows local developing
+  N.B. :If you are on Windows and want to replicate you plugins from your local VS Code environment to remote docker,
   just copy %HOME%\.vscode\extensions (usually like C:\Users\itsmeohgotuser\.vscode\extensions)
   to remote host (usually like /home/coder/.config/appdata/codeserver/extensions/)
   and NOT forget to run following coomands on docker hosting machine:
