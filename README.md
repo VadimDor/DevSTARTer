@@ -46,15 +46,20 @@ You may choose to rely on DockSTARTer for various changes to your Docker system 
   bash -c "$(curl -fsSL https://get.dockstarter.com)"
   sudo reboot
   ```
-  ```N.B. :If you are on Windows and want to replicate you plugins from your local VS Code environment to remote docker,
+  
+  ```bash
+  > N.B. :If you are on Windows and want to replicate you plugins from your local VS Code environment to remote docker,
   just copy %HOME%\.vscode\extensions (usually like C:\Users\itsmeohgotuser\.vscode\extensions)
   to remote host (usually like /home/coder/.config/appdata/codeserver/extensions/)
   and NOT forget to run following coomands on docker hosting machine:
-  1.# stop container
+  ```bash
+  # stop container
    sudo docker stop codeserver
-  2. # change windows paths to actual paths after that in extensions.json file:
+  
+  # change windows paths to actual paths after that in extensions.json file:
    sed -i.bak 's/\/c:\/Users\/itsmeohgotuser\/.vscode\/extensions\//\/config\/extensions\//' /home/coder/.config/appdata/codeserver/extensions/extensions.json
-  3. # start container again
+
+  # start container again
    sudo docker start codeserver
   ```
 
